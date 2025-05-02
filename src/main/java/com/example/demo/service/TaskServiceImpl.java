@@ -64,22 +64,15 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Task updateStatus(Long id, String statusStr) {
-        Optional<Task> optionalTask = taskRepository.findById(id);
-        if (optionalTask.isPresent()) {
-            Status status = parseStatus(statusStr);
-            Task task = optionalTask.get();
-            task.setStatus(status);
-            return taskRepository.save(task);
-        }
-        return null;
+    public List<Task> searchTasksByTitle(String title) {
+        return taskRepository.findByTitleContainingIgnoreCase(title);
     }
 
     @Override
-    public List<Task> getTasksByPriority(int level) {
-        Priority priority = Priority.fromLevel(level); // Will throw if invalid
-        return taskRepository.findByPriority(priority);
+    public List<Task> getTaskByStatus(Status status) {
+        return taskRepository.findByStatus(status);
     }
+
 
     // 🛡️ Helper methods
     private void validateStatus(Status status) {
@@ -94,11 +87,4 @@ public class TaskServiceImpl implements TaskService {
         }
     }
 
-    private Status parseStatus(String statusStr) {
-        try {
-            return Status.valueOf(statusStr.toUpperCase());
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Invalid status: " + statusStr);
-        }
-    }
 }

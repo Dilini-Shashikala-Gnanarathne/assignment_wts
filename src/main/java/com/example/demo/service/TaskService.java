@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Task;
+import com.example.demo.enums.Status;
+
 import java.util.List;
 
 public interface TaskService {
@@ -15,7 +17,8 @@ public interface TaskService {
 
     Task updatetask(Long id, Task taskDetails);
 
-    Task updateStatus(Long id, String statusStr);
+    List<Task> getTaskByStatus(Status status);
 
-    List<Task> getTasksByPriority(int level);
+    List<Task> searchTasksByTitle(String title);
+
 }

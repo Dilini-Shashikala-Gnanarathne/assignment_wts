@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.ApiResponse;
 import com.example.demo.entity.Task;
+import com.example.demo.enums.Status;
 import com.example.demo.service.TaskService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +13,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("api/tasks")
 public class TaskController {
 
     @Autowired
     private TaskService taskService;
 
-    @GetMapping
-    public ResponseEntity<ApiResponse<List<Task>>> getAllTasks() {
-        List<Task> tasks = taskService.getAlltasks();
-        return ResponseEntity.ok(new ApiResponse<>("All tasks fetched successfully", tasks));
+    @GetMapping("/search")
+    public ResponseEntity<ApiResponse<List<Task>>> searchTasksByTitle(@RequestParam String title) {
+        List<Task> tasks = taskService.searchTasksByTitle(title);
+        if (tasks.isEmpty()) {
+            return new ResponseEntity<>(new ApiResponse<>("No tasks found", null), HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(new ApiResponse<>("Tasks found", tasks));
     }
 
     @PostMapping
@@ -30,13 +34,10 @@ public class TaskController {
         return new ResponseEntity<>(new ApiResponse<>("Task added successfully", createdTask), HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<ApiResponse<Task>> updateTask(@PathVariable Long id, @Valid @RequestBody Task taskDetails) {
-        Task updatedTask = taskService.updatetask(id, taskDetails);
-        if (updatedTask != null) {
-            return ResponseEntity.ok(new ApiResponse<>("Task updated successfully", updatedTask));
-        }
-        return new ResponseEntity<>(new ApiResponse<>("Task not found", null), HttpStatus.NOT_FOUND);
+    @GetMapping
+    public ResponseEntity<ApiResponse<List<Task>>> getAllTasks() {
+        List<Task> tasks = taskService.getAlltasks();
+        return ResponseEntity.ok(new ApiResponse<>("All tasks fetched successfully", tasks));
     }
 
     @GetMapping("/{id}")
@@ -44,6 +45,30 @@ public class TaskController {
         Task task = taskService.gettaskById(id);
         if (task != null) {
             return ResponseEntity.ok(new ApiResponse<>("Task retrieved", task));
+        }
+        return new ResponseEntity<>(new ApiResponse<>("Task not found", null), HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping("/status/{status}")
+    public ResponseEntity<ApiResponse<List<Task>>> getTasksByStatus(@PathVariable String status) {
+        try {
+            Status enumStatus = Status.valueOf(status.toUpperCase()); // Convert string to enum
+            List<Task> tasks = taskService.getTaskByStatus(enumStatus);
+            if (tasks.isEmpty()) {
+                return new ResponseEntity<>(new ApiResponse<>("No tasks found", null), HttpStatus.NOT_FOUND);
+            }
+            return ResponseEntity.ok(new ApiResponse<>("Tasks retrieved", tasks));
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(new ApiResponse<>("Invalid status value", null), HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse<Task>> updateTask(@PathVariable Long id, @Valid @RequestBody Task taskDetails) {
+        Task updatedTask = taskService.updatetask(id, taskDetails);
+        if (updatedTask != null) {
+            return ResponseEntity.ok(new ApiResponse<>("Task updated successfully", updatedTask));
         }
         return new ResponseEntity<>(new ApiResponse<>("Task not found", null), HttpStatus.NOT_FOUND);
     }
@@ -57,18 +82,4 @@ public class TaskController {
         return new ResponseEntity<>(new ApiResponse<>("Task not found", null), HttpStatus.NOT_FOUND);
     }
 
-    @PatchMapping("/{id}/status")
-    public ResponseEntity<ApiResponse<Task>> updateTaskStatus(@PathVariable Long id, @RequestBody String status) {
-        Task updatedTask = taskService.updateStatus(id, status);
-        if (updatedTask != null) {
-            return ResponseEntity.ok(new ApiResponse<>("Task status updated successfully", updatedTask));
-        }
-        return new ResponseEntity<>(new ApiResponse<>("Task not found", null), HttpStatus.NOT_FOUND);
-    }
-
-    @GetMapping("/priority/{level}")
-    public ResponseEntity<ApiResponse<List<Task>>> getTasksByPriority(@PathVariable int level) {
-        List<Task> tasks = taskService.getTasksByPriority(level);
-        return ResponseEntity.ok(new ApiResponse<>("Tasks fetched by priority", tasks));
-    }
 }

@@ -7,7 +7,7 @@ import lombok.*;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "task_table")
+@Table(name = "task_table_std")
 @Getter
 @Setter
 @Builder
