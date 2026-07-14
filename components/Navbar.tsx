@@ -34,7 +34,7 @@ export default function Navbar({ isOpen, onClose }: NavbarProps) {
     },
     {
       icon: <Linkedin size={24} />,
-      link: "www.linkedin.com/in/dilini-gnanarathne-352a67227",
+      link: "https://www.linkedin.com/in/dilini-gnanarathne-352a67227/",
       label: "LinkedIn",
     },
   ];

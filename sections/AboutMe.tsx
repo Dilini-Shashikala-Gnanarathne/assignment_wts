@@ -115,7 +115,7 @@ export default function AboutMe({
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="relative w-full h-full flex items-center justify-center">
-            <ThreeDModel modelPath="/models/head_of_david_but_with_hay.glb" />
+            <ThreeDModel modelPath="/models/laptop_and_mouse.glb" />
           </div>
 
           <motion.div
