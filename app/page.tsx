@@ -23,8 +23,8 @@ export default function Home() {
         firstname="Hello I'm Dilini"
         fullname="Dilini Shashikala"
         description="A passionate software engineering enthusiast crafting fast, user-focused web applications."
-        caption="Actually this is not me"
-        statuename="Micahealangelo's David"
+        caption=""
+        statuename=""
       />
       <Projects />
       <Skills />
