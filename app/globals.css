@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060608;
+  --foreground: #f2f0ec;
+
+  /* Palette: ember-coral primary accent, deep teal secondary accent,
+     cool near-black base with a faint violet undertone (not pure gray-black) */
+  --accent: #ff6b4a;
+  --accent-light: #ffb199;
+  --accent-2: #2dd4bf;
+  --accent-2-light: #99f6e4;
+
+  --bg-0: #05060a;
+  --bg-1: #0b0d16;
+  --bg-2: #171226;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #05060a;
+    --foreground: #f2f0ec;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
