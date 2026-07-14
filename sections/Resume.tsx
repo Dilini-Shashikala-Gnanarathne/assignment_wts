@@ -2,6 +2,9 @@
 
 import { Download } from "lucide-react";
 import { resumeData } from "@/data/resume";
+import { motion } from "framer-motion";
+
+import { ExternalLink } from "lucide-react";
 
 export default function Resume() {
   return (
@@ -9,7 +12,7 @@ export default function Resume() {
   <div className="absolute top-20 left-10 w-96 h-96 bg-(--accent)/8 rounded-full blur-3xl" />
   <div className="absolute bottom-20 right-10 w-96 h-96 bg-(--accent-2)/8 rounded-full blur-3xl" />
 
-  <section className="relative w-full px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1400px] mx-auto py-20 sm:py-24 lg:py-32">
+  <section id="resume" className="relative w-full px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1400px] mx-auto py-20 sm:py-24 lg:py-32">
         {/* Header */}
 
        <div className="flex items-center gap-4 mb-6">
@@ -36,16 +39,20 @@ export default function Resume() {
             </p>
           </div>
 
-          <div className="flex lg:justify-end">
-            <a
-              href="/resume.pdf"
-              download
-              className="inline-flex items-center gap-3 rounded-lg bg-white px-8 py-5 text-black text-xl font-medium hover:bg-neutral-200 transition"
-            >
-              <Download size={24} />
-              Download PDF
-            </a>
-          </div>
+          <motion.a
+  href="/resume.pdf"
+  download
+  className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-black rounded-full text-lg font-bold uppercase tracking-wide overflow-hidden"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <span className="absolute inset-0 bg-linear-to-r from-(--accent) to-(--accent-2) translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+
+  <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors duration-300">
+    Download PDF
+    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+  </span>
+</motion.a>
         </div>
 
         {/* Contact */}

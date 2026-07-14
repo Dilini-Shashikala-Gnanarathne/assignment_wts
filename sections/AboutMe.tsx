@@ -119,34 +119,13 @@ export default function AboutMe({
           </div>
 
           <motion.div
-            className="absolute bottom-8 right-8 z-20 backdrop-blur-md bg-(--bg-0)/50 border border-white/10 rounded-2xl p-4 shadow-2xl max-w-xs"
+            className="absolute bottom-8 right-8 z-20rounded-2xl p-4 shadow-2xl max-w-xs"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <div className="flex items-start gap-3">
-              <div className="shrink-0 mt-1">
-                <svg
-                  className="w-6 h-6 text-(--accent)"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 11l5-5m0 0l5 5m-5-5v12"
-                  />
-                </svg>
-              </div>
-
-              <div className="space-y-1">
-                <p className="text-xs text-gray-400 italic">{caption}</p>
-                <p className="text-sm font-bold text-white">{statuename}</p>
-              </div>
-            </div>
+          
           </motion.div>
 
           <motion.div

@@ -62,18 +62,17 @@ export default function Contact() {
           <p className="uppercase tracking-[0.45em] text-sm text-gray-400 mb-8">
             LET'S WORK TOGETHER
           </p>
+<h1 className="font-bold leading-none tracking-tight">
 
-          <h1 className="font-bold leading-none tracking-tight">
+  <span className="block text-white text-[52px] sm:text-7xl md:text-8xl lg:text-[120px]">
+    Building digital
+  </span>
 
-            <span className="block text-white text-[52px] sm:text-7xl md:text-8xl lg:text-[120px]">
-              Have a project
-            </span>
+  <span className="block text-gray-500 text-[52px] sm:text-7xl md:text-8xl lg:text-[120px]">
+    experiences.
+  </span>
 
-            <span className="block text-gray-500 text-[52px] sm:text-7xl md:text-8xl lg:text-[120px]">
-              in mind?
-            </span>
-
-          </h1>
+</h1>
 
           <p className="mt-10 max-w-3xl mx-auto text-gray-300 text-lg md:text-xl leading-9">
             I'm always open to discussing new projects,
