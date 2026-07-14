@@ -23,7 +23,7 @@ const interests = [
 
 export default function Contact() {
   const handleContactClick = () => {
-    window.location.assign("mailto:sudeepa1234nisal@gmail.com");
+    window.location.assign("mailto:shashikaladilini11@gmail.com");
   };
 
   return (
@@ -116,7 +116,7 @@ export default function Contact() {
         href="mailto:sudeepa1234nisal@gmail.com"
         className="text-xl md:text-2xl text-white hover:text-gray-300 transition"
       >
-        sudeepa1234nisal@gmail.com
+        shashikaladilini11@gmail.com
       </a>
     </div>
   </motion.div>
@@ -142,7 +142,7 @@ export default function Contact() {
         href="tel:+94712345678"
         className="text-xl md:text-2xl text-white hover:text-gray-300 transition"
       >
-        (+94) 71 234 5678
+        (+94) 774379113
       </a>
     </div>
   </motion.div>
@@ -174,7 +174,7 @@ export default function Contact() {
 {/* Footer */}
 <div className="mt-16 border-t border-white/10 pt-8 flex flex-wrap justify-center gap-10">
   <a
-    href="https://github.com/sudeepa99"
+    href="https://github.com/Dilini-Shashikala-Gnanarathne"
     target="_blank"
     rel="noopener noreferrer"
     className="uppercase tracking-[0.25em] text-sm text-gray-400 hover:text-white transition"
@@ -183,7 +183,7 @@ export default function Contact() {
   </a>
 
   <a
-    href="https://www.linkedin.com/in/sudeepa-nisal/"
+    href="https://www.linkedin.com/in/dilini-gnanarathne-352a67227/"
     target="_blank"
     rel="noopener noreferrer"
     className="uppercase tracking-[0.25em] text-sm text-gray-400 hover:text-white transition"
@@ -192,7 +192,7 @@ export default function Contact() {
   </a>
 
   <a
-    href="https://medium.com/@sudeepa5678nisal"
+    href="https://medium.com/@shashikaladilini11"
     target="_blank"
     rel="noopener noreferrer"
     className="uppercase tracking-[0.25em] text-sm text-gray-400 hover:text-white transition"
@@ -211,13 +211,14 @@ export default function Contact() {
     <div>
 
       <h2 className="text-4xl font-bold text-white mb-6">
-        Sudeepa.
+        Dilini.
       </h2>
 
-      <p className="text-gray-400 leading-8 max-w-sm">
-        Creating exceptional digital experiences through thoughtful
-        design and user-centered solutions.
-      </p>
+    <p className="text-gray-400 leading-8 max-w-sm">
+  Software Engineer and AI Researcher passionate about building scalable
+  applications, intelligent systems, and impactful digital experiences through
+  innovative technology and user-focused design.
+</p>
 
     </div>
 
@@ -262,7 +263,7 @@ export default function Contact() {
       <div className="flex gap-4">
 
         <a
-          href="https://www.linkedin.com/in/sudeepa-nisal/"
+          href="https://www.linkedin.com/in/dilini-gnanarathne-352a67227/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-xl border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition"
@@ -271,7 +272,7 @@ export default function Contact() {
         </a>
 
         <a
-          href="https://medium.com/@sudeepa5678nisal"
+          href="https://medium.com/@shashikaladilini11"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-xl border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition"
@@ -280,21 +281,12 @@ export default function Contact() {
         </a>
 
         <a
-          href="https://github.com/sudeepa99"
+          href="https://github.com/Dilini-Shashikala-Gnanarathne"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 rounded-xl border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition"
         >
           <Github size={22} />
-        </a>
-
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-14 h-14 rounded-xl border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition"
-        >
-          <Instagram size={22} />
         </a>
 
       </div>
@@ -313,7 +305,7 @@ export default function Contact() {
 
     <p className="text-gray-500">
       Designed & Developed by
-      <span className="text-white font-medium"> Sudeepa Nisal</span>
+      <span className="text-white font-medium"> Dilini Gnanarathne</span>
     </p>
 
   </div>

@@ -94,7 +94,7 @@ export default function Projects() {
           <motion.button
             onClick={() =>
               window.open(
-                "https://github.com/sudeepa99?tab=repositories",
+                "https://github.com/Dilini-Shashikala-Gnanarathne?tab=repositories",
                 "_blank",
               )
             }

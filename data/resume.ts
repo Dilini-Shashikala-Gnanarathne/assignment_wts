@@ -16,14 +16,10 @@ export const resumeData = {
     last: "Gnanarathne",
   },
 
-
   title: "Associate Software Engineer",
-
 
   summary:
     "Motivated Full-Stack Software Engineer with 1.5+ years of experience designing, developing, and maintaining enterprise ERP applications. Skilled in building scalable web applications using Angular, React, Java, Spring Boot, PostgreSQL, and REST/gRPC APIs. Strong collaborator with experience working in cross-functional teams to deliver reliable, high-quality software aligned with business objectives. Passionate about solving complex engineering challenges, continuously learning new technologies, and applying a research-driven approach to software development.",
-
-
 
   contact: [
 
@@ -39,13 +35,11 @@ export const resumeData = {
       icon: Phone,
     },
 
-
     {
       label: "Location",
       value: "Colombo, Sri Lanka",
       icon: MapPin,
     },
-
 
     {
       label: "LinkedIn",
@@ -54,14 +48,12 @@ export const resumeData = {
       icon: Linkedin,
     },
 
-
     {
       label: "Github",
       value: "Dilini-Shashikala-Gnanarathne",
       href: "https://github.com",
       icon: Github,
     },
-
 
     {
       label: "Portfolio",
@@ -71,8 +63,6 @@ export const resumeData = {
     },
 
   ],
-
-
 
   education: [
 
@@ -92,9 +82,6 @@ export const resumeData = {
 
   ],
 
-
-
-
   experience: [
 
     {
@@ -106,7 +93,6 @@ export const resumeData = {
 
       duration:
         "Jun 2025 – Present",
-
 
       description: [
 
@@ -122,8 +108,6 @@ export const resumeData = {
 
     },
 
-
-
     {
 
       role:
@@ -134,7 +118,6 @@ export const resumeData = {
 
       duration:
         "Feb 2025 – May 2025",
-
 
       description: [
 
@@ -148,8 +131,6 @@ export const resumeData = {
 
     },
 
-
-
     {
 
       role:
@@ -160,7 +141,6 @@ export const resumeData = {
 
       duration:
         "Aug 2024 – Feb 2025",
-
 
       description: [
 
@@ -175,169 +155,6 @@ export const resumeData = {
     },
 
   ],
-
-
-
-
-
-  projects: [
-
-    {
-
-      title:
-        "AAIB – Enterprise Resource Planning (ERP) System",
-
-      description: [
-
-        "Developed and enhanced an enterprise ERP system for the Agricultural & Agrarian Insurance Board (AAIB).",
-
-        "Implemented Inventory, Purchasing, Fixed Asset Management, and General Ledger modules.",
-
-        "Developed Angular frontend features and Spring Boot backend services.",
-
-        "Optimized database operations using SQL stored procedures and integrated gRPC services.",
-
-      ],
-
-
-      stack:
-        "Angular, Java, Spring Boot, gRPC, PostgreSQL, Git",
-
-      ai:
-        "GitHub Copilot",
-
-    },
-
-
-
-    {
-
-      title:
-        "Serendib Microinsurance System",
-
-
-      description: [
-
-        "Developed ERP modules including Excess Collection Management and General Ledger functionality.",
-
-        "Implemented security improvements for authentication and authorization.",
-
-        "Optimized database performance using SQL stored procedures and gRPC communication.",
-
-        "Supported debugging, testing, code reviews, and production improvements.",
-
-      ],
-
-
-      stack:
-        "Angular, Java, Spring Boot, gRPC, PostgreSQL, Git",
-
-      ai:
-        "GitHub Claude",
-
-    },
-
-
-
-    {
-
-      title:
-        "Stock Management System",
-
-
-      description: [
-
-        "Built a full-stack inventory management system with JWT authentication, REST APIs, and React frontend.",
-
-      ],
-
-
-      stack:
-        "MERN, JWT, GitHub, Figma, Azure",
-
-    },
-
-
-  ],
-
-
-
-
-
-  skills: {
-
-
-    languages:
-      "Java, SQL, JavaScript, TypeScript, HTML5, CSS3",
-
-
-    frontend:
-      "Angular, React.js",
-
-
-    backend:
-      "Spring Boot, Spring MVC, Spring Data JPA, REST APIs, Microservices, gRPC, Express.js",
-
-
-    databases:
-      "PostgreSQL, MySQL, MongoDB, Oracle Database",
-
-
-    security:
-      "Spring Security, JWT Authentication",
-
-
-    tools:
-      "Git, GitHub, Docker, Maven, Postman, Swagger/OpenAPI",
-
-
-    core:
-      "Backend Development, REST API Development, Object-Oriented Programming, Database Design, SQL Optimization, Distributed Systems, Software Architecture, Agile Development",
-
-  },
-
-
-
-
-
-  certificates: [
-
-    "React Basics",
-
-    "MongoDB Aggregation with Node.js",
-
-    "Working with Version Control",
-
-    "Web Design for Beginners",
-
-    "Java (Basic) Certificate",
-
-    "AI/ML Engineer - Stage 1",
-
-  ],
-
-
-
-
-  softSkills: [
-
-    "Teamwork",
-
-    "Critical Thinking",
-
-    "Communication",
-
-    "Leadership",
-
-    "Problem Solving",
-
-    "Continuous Learning",
-
-  ],
-
-
-
-
 
   publications: [
 
@@ -354,7 +171,6 @@ export const resumeData = {
 
     },
 
-
     {
 
       type:
@@ -367,9 +183,5 @@ export const resumeData = {
         "Computing Undergraduate Research Symposium (ComURS), January 2026",
 
     },
-
-
   ],
-
-
 };
